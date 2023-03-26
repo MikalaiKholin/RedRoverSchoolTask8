@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         Employee ben = new Employee("Ben", 34, Gender.MALE, 25.3, 755);
 
         int days = 10;
