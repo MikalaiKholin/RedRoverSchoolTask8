@@ -44,6 +44,6 @@ public class Employee {
     }
 
     public double getSalary(int days){
-        return days * salaryPerDay;
+        return days * this.getSalaryPerDay();
     }
 }
