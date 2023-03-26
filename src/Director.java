@@ -8,4 +8,8 @@ public class Director extends Manager{
         if (this.getNumberOfSubordinates() == 0) return  getBaseSalary();
         return this.getBaseSalary() * ((double)this.getNumberOfSubordinates() / 100 * 9);
     }
+
+    public double getSalary(){
+        return this.getBaseSalary() + this.getSalaryDirector();
+    }
 }

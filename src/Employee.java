@@ -57,6 +57,10 @@ public class Employee {
         return days * this.getSalaryPerDay();
     }
 
+    public double getSalary(){
+        return this.getBaseSalary();
+    }
+
     @Override
     public String toString() {
         return "Employee{" +

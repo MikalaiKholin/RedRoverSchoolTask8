@@ -19,6 +19,10 @@ public class Manager extends Employee{
         return days * this.getSalaryPerDay() * (1 + (double)this.getNumberOfSubordinates() / 100);
     }
 
+    public double getSalary(){
+        return this.getBaseSalary() + this.getSalaryManager();
+    }
+
     public double getSalaryManager(){
         if (this.getNumberOfSubordinates() == 0) return  getBaseSalary();
         return this.getBaseSalary() * ((double)this.getNumberOfSubordinates() / 100 * 3);

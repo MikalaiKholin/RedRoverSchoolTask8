@@ -13,13 +13,13 @@ public class Main {
 
         days = 30;
         System.out.printf("%s's salary for %d days is %.2f%n", anna.getName(), days, anna.getSalary(days));
-        System.out.printf("%s's manager salary is %.2f%n", anna.getName(), anna.getSalaryManager());
+        System.out.printf("%s's manager bonus is %.2f%n", anna.getName(), anna.getSalaryManager());
 
         Worker nick = new Worker("Nick", 24, Gender.MALE, 23, 750);
         System.out.printf("%s's base salary is %.2f%n", nick.getName(), nick.getSalaryWorker());
 
         Director bill = new Director("Bill", 52, Gender.MALE, 40, 1000, 354);
-        System.out.printf("%s's director salary is %.2f%n", bill.getName(), bill.getSalaryDirector());
+        System.out.printf("%s's director bonus is %.2f%n", bill.getName(), bill.getSalaryDirector());
 
         Employee [] empoyees = {ben, anna, ted, sveta, ihar, nick, bill};
         Manager [] managers = {anna, ted, sveta, ihar};
@@ -28,7 +28,8 @@ public class Main {
         System.out.printf("Employee with name %s is %s%n", name, Utils.getEmployeeByName(name, empoyees));
 
         String pathOfName = "ic";
-        System.out.printf("Employee with path of name %s is %s%n", pathOfName, Utils.getEmployeeByPathOfName(pathOfName, empoyees));
+        System.out.printf("Employee with path of name %s is %s%n",
+                pathOfName, Utils.getEmployeeByPathOfName(pathOfName, empoyees));
 
         System.out.printf("Budget of company is %.2f%n", Utils.getBudget(empoyees));
 
@@ -43,5 +44,8 @@ public class Main {
         System.out.printf("Max manager bonus is %.2f%n", Utils.getMaxManagerBonus(managers));
 
         System.out.printf("Min manager bonus is %.2f%n", Utils.getMinManagerBonus(managers));
+
+        System.out.printf("%s's manager bonus is %.2f and full salary is %.2f%n",
+                anna.getName(), anna.getSalaryManager(), anna.getSalary());
     }
 }
