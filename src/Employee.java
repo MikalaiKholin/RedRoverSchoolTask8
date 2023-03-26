@@ -3,12 +3,22 @@ public class Employee {
     private int age;
     private Gender gender;
     private double salaryPerDay;
+    private double baseSalary;
 
-    public Employee(String name, int age, Gender gender, double salaryPerDay) {
+    public double getBaseSalary() {
+        return baseSalary;
+    }
+
+    public void setBaseSalary(double baseSalary) {
+        this.baseSalary = baseSalary;
+    }
+
+    public Employee(String name, int age, Gender gender, double salaryPerDay, double baseSalary) {
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.salaryPerDay = salaryPerDay;
+        this.baseSalary = baseSalary;
     }
 
     public String getName() {
@@ -45,5 +55,13 @@ public class Employee {
 
     public double getSalary(int days){
         return days * this.getSalaryPerDay();
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
