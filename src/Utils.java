@@ -16,7 +16,7 @@ public class Utils {
     public static double getBudget (Employee[] employees){
         double budget = 0;
         for (Employee e: employees){
-          budget += e.getBaseSalary();
+          budget += e.getSalary();
         }
         return budget;
     }
